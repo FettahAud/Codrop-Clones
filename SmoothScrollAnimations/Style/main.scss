@@ -1,0 +1,210 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+$font-clr: #1c1b1b;
+$bg-clr: #efe6e1;
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Montserrat", "Sans-serif";
+	color: $font-clr;
+}
+body {
+	background-color: $bg-clr;
+	&.small-screen {
+		height: 100vh;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		& > *:not(.info) {
+			display: none;
+		}
+		.info {
+			display: block;
+			font-size: 1rem;
+			text-align: center;
+		}
+	}
+	.info {
+		display: none;
+	}
+}
+.container {
+	min-height: 100vh;
+	.item-cont {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		// gap: 15rem;
+		.item {
+			padding-top: 10rem;
+			position: relative;
+			&__img-wrap {
+				--aspect-ratio: 750 / 600;
+				--width: 500px;
+				overflow: hidden;
+				width: var(--width);
+				max-width: 100%;
+				padding-bottom: calc(var(--aspect-ratio) * 100%);
+				will-change: transform;
+				.item-img {
+					--image: url("../Assets/1.jpg");
+					--overflow: 60px;
+					height: calc(100% + (2 * var(--overflow)));
+					top: calc(-1 * var(--overflow));
+					width: 100%;
+					position: absolute;
+					background-image: var(--image);
+					background-size: cover;
+					background-position: 50% 0%;
+					will-change: transform;
+				}
+			}
+			&__caption {
+				&-title {
+					font-size: 2.5rem;
+					font-weight: 700;
+					line-height: 1.2;
+					margin: 1rem 0;
+				}
+				&-copy {
+					font-size: 0.9rem;
+					margin-top: 3rem;
+					position: relative;
+					&::before {
+						content: "";
+						width: 2rem;
+						height: 2px;
+						background-color: #c35340;
+						position: absolute;
+						top: -20px;
+					}
+				}
+			}
+			&::before {
+				content: "01";
+				font-size: 9rem;
+				font-weight: bold;
+				color: rgba($color: $font-clr, $alpha: 0.1);
+				position: absolute;
+				top: 2rem;
+			}
+		}
+		&:nth-child(even) .item::before {
+			right: 0;
+		}
+		&:nth-child(2) .item {
+			&::before {
+				content: "02";
+			}
+			.item__img-wrap {
+				--aspect-ratio: 700 / 1200;
+				--width: 1000px;
+				.item-img {
+					--image: url("../Assets/2.jpg");
+					--overflow: 80px;
+				}
+			}
+		}
+		&:nth-of-type(3) .item {
+			&::before {
+				content: "03";
+			}
+			.item__img-wrap {
+				--aspect-ratio: 750 / 600;
+				--width: 500px;
+				.item-img {
+					--image: url("../Assets/3.jpg");
+					--overflow: 80px;
+				}
+			}
+		}
+		&:nth-of-type(4) .item {
+			&::before {
+				content: "04";
+			}
+			.item__img-wrap {
+				--aspect-ratio: 500 / 1000;
+				--width: 800px;
+				.item-img {
+					--image: url("../Assets/4.jpg");
+					--overflow: 100px;
+				}
+			}
+		}
+		&:nth-child(5) .item {
+			// margin-top: -5rem;
+			&::before {
+				content: "05";
+			}
+			.item__img-wrap {
+				--aspect-ratio: 700 / 600;
+				--width: 561px;
+				.item-img {
+					--image: url("../Assets/5.jpg");
+					--overflow: 80px;
+				}
+			}
+		}
+		&:nth-child(6) .item {
+			&::before {
+				content: "06";
+			}
+			.item__img-wrap {
+				--aspect-ratio: 844 / 1500;
+				--width: 1200px;
+				.item-img {
+					--image: url("../Assets/6.jpg");
+					--overflow: 120px;
+				}
+			}
+		}
+		&:nth-child(7) .item {
+			// margin-top: 3rem;
+			&::before {
+				content: "07";
+			}
+			.item__img-wrap {
+				--aspect-ratio: 749 / 1000;
+				--width: 1000px;
+				.item-img {
+					--image: url("../Assets/7.jpg");
+					--overflow: 60px;
+				}
+			}
+		}
+		&:nth-child(8) .item {
+			// margin-top: 8rem;
+			&::before {
+				content: "08";
+			}
+			.item__img-wrap {
+				--aspect-ratio: 452 / 800;
+				--width: 900px;
+				.item-img {
+					--image: url("../Assets/8.jpg");
+					--overflow: 120px;
+				}
+			}
+		}
+		&:nth-child(9) .item {
+			// margin-top: -6rem;
+			&::before {
+				content: "09";
+			}
+			.item__img-wrap {
+				--aspect-ratio: 470 / 330;
+				--width: 473px;
+				.item-img {
+					--image: url("../Assets/9.jpg");
+					--overflow: 120px;
+				}
+			}
+			.item__caption {
+				&-copy {
+					padding-bottom: 8rem;
+				}
+			}
+		}
+	}
+}
