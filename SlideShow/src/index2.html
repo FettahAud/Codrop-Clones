@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Outfit:100,200,300,regular,500,600,700,800,900" rel="stylesheet" />
+    <link rel="stylesheet" href="./Style/Main/main.css">
+    <title>Shapes SlideShow | Demo 2</title>
+    <style>
+        .slide{
+            top: 0;
+		    left: 0;
+        }
+        .slide .content .exp.hover:hover ~ .img {
+            clip-path: inset(20% 40% 20.01% 40.01% round 25vw 25vw 25.01vw 25.01vw) !important;
+        }
+        .slide .content .exp {
+            line-height: 1.5;
+        }
+        .slide-1 .img {
+            clip-path: inset(10% 30.1% 0% 30% round 25vw 25vw 0vw 0vw);
+            background-image: url("./Assets/Demo-2/bg1.jpg");
+        }
+        .slide:not(.slide-1) .img
+        {
+            clip-path: inset(15% 40.1% 15% 40% round 25vw 25vw 25.01vw 25.01vw)
+        }
+        .slide-2 {
+            top: -100vh;
+        }
+        .slide-2 .img {
+            background-image: url("./Assets/Demo-2/bg2.jpg");
+        }
+        .slide-3 {
+            top: 200vh;
+        }
+        .slide-3 .img {
+            background-image: url("./Assets/Demo-2/bg3.jpg");
+        }
+        .slide-4 {
+            top: 200vh;
+        }
+        .slide-4 .img {
+            background-image: url("./Assets/Demo-2/bg4.jpg");
+        }
+        @media screen and (max-width: 46.875em) {
+        .container {
+            display: none;
+        }
+        .mobile {
+            display: block;
+            font-size: 4rem;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        }
+    </style>
+</head>
+<body>
+    <div class="mobile">
+        We Are Not Available on Mobile
+    </div>
+    <div class="container">
+        <div class="header-cont">
+            <div class="logo">Fettah</div>
+            <div class="my-repo link hover"><a href="https://github.com/FettahAud/SlideShow-Clone" target="_blank">Github</a></div>
+            <div class="owner-repo link hover"><a href="https://tympanus.net/Development/ShapesSlideshow/index2.html" target="_blank">Owner</a></div>
+        </div>
+        <div class="footer-cont">
+            <div class="demos">
+                <div class="demo demo1 hover"><a href="https://fettahaud.github.io/SlideShow-Clone/src/index.html">Demo 1</a></div>
+                <div class="demo demo2 hover current"><a href="https://fettahaud.github.io/SlideShow-Clone/src/index2.html">Demo 2</a></div>
+                <div class="demo demo3 hover"><a href="https://fettahaud.github.io/SlideShow-Clone/src/index3.html">Demo 3</a></div>
+                <div class="demo demo4 hover"><a href="https://fettahaud.github.io/SlideShow-Clone/src/index4.html">Demo 4</a></div>
+            </div>
+            <div class="arrows">
+                <svg xmlns="http://www.w3.org/2000/svg" width="128" height="23" viewBox="0 0 128 23">
+                    <g id="Arrows" transform="translate(-818 -353)">
+                        <g id="Left" transform="translate(817.5 352.5)">
+                            <rect id="bg" width="54" height="23" transform="translate(0.5 0.5)" fill="rgba(0,0,0,0)"/>
+                            <path id="Path_12" data-name="Path 12" d="M1.176,11.532a.5.5,0,0,0-.352.936,25.4,25.4,0,0,1,12.752,10.8.5.5,0,0,0,.848-.53,26.4,26.4,0,0,0-13.248-11.2Z"/>
+                            <path id="Path_13" data-name="Path 13" d="M1.176,12.468a.5.5,0,0,1-.352-.936A25.393,25.393,0,0,0,13.576.735a.5.5,0,0,1,.848.53,26.4,26.4,0,0,1-13.248,11.2Z"/>
+                            <path id="Path_14" data-name="Path 14" d="M1,12.5a.5.5,0,0,1,0-1H54a.5.5,0,0,1,0,1Z"/>
+                        </g>
+                        <g id="Right" transform="translate(946.5 376.5) rotate(180)">
+                            <rect id="bg-2" data-name="bg" width="54" height="23" transform="translate(54.5 23.5) rotate(-180)" fill="rgba(0,0,0,0)"/>
+                            <path id="Path_12-2" data-name="Path 12" d="M1.176,11.532a.5.5,0,0,0-.352.936,25.4,25.4,0,0,1,12.752,10.8.5.5,0,0,0,.848-.53,26.4,26.4,0,0,0-13.248-11.2Z"/>
+                            <path id="Path_13-2" data-name="Path 13" d="M1.176,12.468a.5.5,0,0,1-.352-.936A25.393,25.393,0,0,0,13.576.735a.5.5,0,0,1,.848.53,26.4,26.4,0,0,1-13.248,11.2Z"/>
+                            <path id="Path_14-2" data-name="Path 14" d="M1,12.5a.5.5,0,0,1,0-1H54a.5.5,0,0,1,0,1Z"/>
+                        </g>
+                    </g>
+                </svg>              
+            </div>
+        </div>
+        <div class="slider">
+            <div class="slide slide-1">
+                <div class="content">
+                    <div class="heading-1">
+                        <span class="wrapper">TEMPTATION</span>
+                    </div>
+                    <div class="heading-1">
+                        <span class="wrapper">A <i class="itl">DESIRE</i> TO <span class="itl">ENGAGE</span></span>
+                    </div>
+                    <div class="exp hover"><span class="wrapper">Explore</span></div>
+                    <div class="img"></div>
+                </div>
+            </div>
+            <div class="slide slide-2">
+                <div class="content">
+                    <div class="heading-1">
+                        <span class="wrapper">HEARTFUL <span class="itl">ACTS</span></span>
+                    </div>
+                    <div class="heading-1">
+                        <span class="wrapper">WHEN <span class="itl">PASSION</span> CALLS</span>
+                    </div>
+                    <div class="exp hover"><span class="wrapper">Explore</span></div>
+                    <div class="img"></div>
+                </div>
+            </div>
+            <div class="slide slide-3">
+                <div class="content">
+                    <div class="heading-1">
+                        <span class="wrapper">SOMEBODY'S <span class="itl">GAME</span></span>
+                    </div>
+                    <div class="heading-1">
+                        <span class="wrapper">IN ANCIENT <span class="itl">DREAMS</span></span>
+                    </div>
+                    <div class="exp hover"><span class="wrapper">Explore</span></div>
+                    <div class="img"></div>
+                </div>
+            </div>
+            <div class="slide slide-4">
+                <div class="content">
+                    <div class="heading-1">
+                        <span class="wrapper">FAR FROM <span class="itl">VENICE</span>
+                    </div>
+                    <div class="heading-1">
+                        <span class="wrapper">SUNSET IN HER <span class="itl">GAZE</span> </span>
+                    </div>
+                    <div class="exp hover"><span class="wrapper">Explore</span></div>
+                    <div class="img"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js" integrity="sha512-eP6ippJojIKXKO8EPLtsUMS+/sAGHGo1UN/38swqZa1ypfcD4I0V/ac5G3VzaHfDaklFmQLEs51lhkkVaqg60Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./js/slider.js"></script>  
+    <script src="./js/Demo-2/gsap.js"></script>
+</body>
+</html>

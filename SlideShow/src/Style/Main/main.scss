@@ -1,0 +1,239 @@
+@import url("../Font/font.css");
+@import url(https://fonts.googleapis.com/css?family=Meow+Script:regular);
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "rucksack", sans-serif;
+}
+body {
+	height: 100vh;
+}
+.mobile {
+	display: none;
+}
+.container {
+	height: 100vh;
+	width: 100%;
+	background-color: black;
+	display: flex;
+	justify-self: center;
+	align-items: center;
+	position: relative;
+	overflow: hidden;
+	.header-cont {
+		width: 100%;
+		height: 15vh;
+		position: absolute;
+		// background: red;
+		z-index: 10;
+		top: 0;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0 4rem 0 3rem;
+		.logo {
+			color: white;
+			font-family: "Meow Script", sans-serif;
+			font-size: 2.4rem;
+		}
+		.link {
+			position: relative;
+			a {
+				color: white;
+				text-decoration: none;
+				font-size: 1.1rem;
+			}
+			&::before {
+				content: "";
+				position: absolute;
+				width: 0%;
+				height: 1px;
+				bottom: -4px;
+				background-color: white;
+				transition: 0.2s all cubic-bezier(0.165, 0.84, 0.44, 1);
+			}
+			&.hover:hover::before {
+				width: 45%;
+			}
+		}
+	}
+	.footer-cont {
+		width: 100%;
+		height: 15vh;
+		position: absolute;
+		// background: red;
+		z-index: 10;
+		bottom: 0;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0 4rem 0 3rem;
+		.arrows {
+			position: relative;
+			z-index: 10;
+			svg {
+				fill: white;
+				#Arrows {
+					g {
+						cursor: pointer;
+					}
+				}
+			}
+		}
+		.demos {
+			width: 50%;
+			height: 100%;
+			display: flex;
+			align-items: center;
+			gap: 2rem;
+			.demo {
+				position: relative;
+				cursor: pointer;
+				a {
+					text-decoration: none;
+					color: white;
+					text-transform: lowercase;
+				}
+				&::before {
+					content: "";
+					position: absolute;
+					width: 0%;
+					height: 1px;
+					bottom: -4px;
+					background-color: white;
+					transition: 0.2s all
+						cubic-bezier(
+							0.165,
+							0.84,
+							0.44,
+							1
+						);
+				}
+				&.hover:hover::before {
+					width: 45%;
+				}
+				&.current a {
+					pointer-events: none;
+				}
+				&:not(.current)::before {
+					background-color: #006fcf;
+				}
+				&:not(.current) a {
+					color: #006fcf;
+				}
+			}
+		}
+	}
+	.slide {
+		width: 100%;
+		height: 100%;
+		background-color: black;
+		position: absolute;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		.content {
+			// background-color: red;
+			color: white;
+			width: 80%;
+			z-index: 1;
+			.heading-1 {
+				font-weight: 200;
+				font-size: 5.5rem;
+				line-height: 1;
+				user-select: none;
+				width: max-content;
+				overflow: hidden;
+				.itl {
+					font-family: "freight-big-pro", serif;
+				}
+				.wrapper {
+					display: inline-block;
+				}
+			}
+			.exp {
+				font-size: 2rem;
+				cursor: pointer;
+				width: max-content;
+				margin-top: 1.25rem;
+				overflow: hidden;
+				position: relative;
+				.wrapper {
+					display: inline-block;
+					margin: 3px 0;
+				}
+				&::before {
+					content: "";
+					position: absolute;
+					width: 0%;
+					height: 2px;
+					bottom: 0px;
+					background-color: white;
+					transition: 0.2s all
+						cubic-bezier(
+							0.165,
+							0.84,
+							0.44,
+							1
+						);
+				}
+				&.hover:hover::before {
+					width: 45%;
+				}
+			}
+			.img {
+				height: 100vh;
+				width: 100%;
+				position: absolute;
+				top: 0;
+				left: 0;
+				background-size: cover;
+				z-index: -1;
+				transition: 0.5s clip-path
+					cubic-bezier(0.165, 0.84, 0.44, 1);
+			}
+		}
+	}
+}
+@media screen and (max-width: 68.75em) {
+	.container {
+		.slide {
+			.content {
+				.heading-1 {
+					font-size: 4rem;
+				}
+				.exp {
+					font-size: 1.5rem;
+				}
+				.img {
+					background-position: right;
+				}
+			}
+		}
+	}
+}
+@media screen and (max-width: 48em) {
+	html,
+	body {
+		font-size: 14px;
+	}
+	.exp {
+		font-size: 1rem;
+	}
+}
+@media screen and (max-width: 40em) {
+	.container {
+		display: none;
+	}
+	.mobile {
+		display: block;
+		font-size: 4rem;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+}

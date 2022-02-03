@@ -1,0 +1,250 @@
+@import url("../Font/font.css");
+@import url(https://fonts.googleapis.com/css?family=Meow+Script:regular);
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "rucksack", sans-serif;
+}
+
+body {
+  height: 100vh;
+}
+
+.mobile {
+  display: none;
+}
+
+.container {
+  height: 100vh;
+  width: 100%;
+  background-color: black;
+  display: flex;
+  justify-self: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.container .header-cont {
+  width: 100%;
+  height: 15vh;
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 4rem 0 3rem;
+}
+
+.container .header-cont .logo {
+  color: white;
+  font-family: "Meow Script", sans-serif;
+  font-size: 2.4rem;
+}
+
+.container .header-cont .link {
+  position: relative;
+}
+
+.container .header-cont .link a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+.container .header-cont .link::before {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 1px;
+  bottom: -4px;
+  background-color: white;
+  transition: 0.2s all cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.container .header-cont .link.hover:hover::before {
+  width: 45%;
+}
+
+.container .footer-cont {
+  width: 100%;
+  height: 15vh;
+  position: absolute;
+  z-index: 10;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 4rem 0 3rem;
+}
+
+.container .footer-cont .arrows {
+  position: relative;
+  z-index: 10;
+}
+
+.container .footer-cont .arrows svg {
+  fill: white;
+}
+
+.container .footer-cont .arrows svg #Arrows g {
+  cursor: pointer;
+}
+
+.container .footer-cont .demos {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.container .footer-cont .demos .demo {
+  position: relative;
+  cursor: pointer;
+}
+
+.container .footer-cont .demos .demo a {
+  text-decoration: none;
+  color: white;
+  text-transform: lowercase;
+}
+
+.container .footer-cont .demos .demo::before {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 1px;
+  bottom: -4px;
+  background-color: white;
+  transition: 0.2s all cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.container .footer-cont .demos .demo.hover:hover::before {
+  width: 45%;
+}
+
+.container .footer-cont .demos .demo.current a {
+  pointer-events: none;
+}
+
+.container .footer-cont .demos .demo:not(.current)::before {
+  background-color: #006fcf;
+}
+
+.container .footer-cont .demos .demo:not(.current) a {
+  color: #006fcf;
+}
+
+.container .slide {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container .slide .content {
+  color: white;
+  width: 80%;
+  z-index: 1;
+}
+
+.container .slide .content .heading-1 {
+  font-weight: 200;
+  font-size: 5.5rem;
+  line-height: 1;
+  user-select: none;
+  width: max-content;
+  overflow: hidden;
+}
+
+.container .slide .content .heading-1 .itl {
+  font-family: "freight-big-pro", serif;
+}
+
+.container .slide .content .heading-1 .wrapper {
+  display: inline-block;
+}
+
+.container .slide .content .exp {
+  font-size: 2rem;
+  cursor: pointer;
+  width: max-content;
+  margin-top: 1.25rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.container .slide .content .exp .wrapper {
+  display: inline-block;
+  margin: 3px 0;
+}
+
+.container .slide .content .exp::before {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: 0px;
+  background-color: white;
+  transition: 0.2s all cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.container .slide .content .exp.hover:hover::before {
+  width: 45%;
+}
+
+.container .slide .content .img {
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  z-index: -1;
+  transition: 0.5s clip-path cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+@media screen and (max-width: 68.75em) {
+  .container .slide .content .heading-1 {
+    font-size: 4rem;
+  }
+  .container .slide .content .exp {
+    font-size: 1.5rem;
+  }
+  .container .slide .content .img {
+    background-position: right;
+  }
+}
+
+@media screen and (max-width: 48em) {
+  html,
+  body {
+    font-size: 14px;
+  }
+  .exp {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 40em) {
+  .container {
+    display: none;
+  }
+  .mobile {
+    display: block;
+    font-size: 4rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+/*# sourceMappingURL=main.css.map */
