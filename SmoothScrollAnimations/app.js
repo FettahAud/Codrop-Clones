@@ -1,5 +1,5 @@
 function notSupportSmallScreen() {
-   const mediaQuery = window.matchMedia("(max-width: 800px)");
+   const mediaQuery = window.matchMedia("(max-width: 600px)");
    if (mediaQuery.matches) {
       document.querySelector('body').classList.add('small-screen');
       console.log('small screen');
